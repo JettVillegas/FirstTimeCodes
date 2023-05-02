@@ -1,0 +1,53 @@
+//Villegas, Jett V.
+//BSIT-1A
+//march 3 2023
+
+#include <iostream>
+
+using namespace std;
+
+int main ()
+
+{
+	int x, y, z;
+	
+	cout << "Enter number of columns: ";
+	cin >> x;
+	
+	cout << "Enter number of sub-columns: ";
+	cin >> y;
+	
+	cout << "Enter number of elements: ";
+	cin >> z;
+	
+	string array[x][y][z];
+	
+	for (int i = 0; i < x; i++)
+	{
+		cout << "\nColumn " << i + 1 << endl;
+		for (int j = 0; j < y; j++)
+		{
+			cout << "Sub-Column " << j + 1 << endl;
+			for (int k = 0; k < z; k++)
+			{
+				cout << "Element " << k + 1 << ": ";
+				cin >> array[i][j][k];
+			}
+		}
+	}
+	cout << "\nMULTI DIMENSIONAL ARRAYS ELEMENTS\n";
+	for (int i = 0; i < x; i++) {
+		cout << "\nColumn " << i + 1 << endl;
+		for (int j = 0; j < y; j++)
+		{
+			cout << "Sub-Column " << j + 1 << endl;
+			for (int k = 0; k < z; k++)
+			{
+				cout << "Element " << k +1 << ": ";
+				cout << array[i][j][k];
+				cout << endl;
+			}
+		}
+	}
+    return 0;
+}
