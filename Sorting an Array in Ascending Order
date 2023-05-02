@@ -1,0 +1,44 @@
+// Villegas, Jett V.
+//BSIT-1A
+//March 3 2023
+
+
+
+// Sorting an Array in Ascending Order
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int i, j;
+	int temp;
+		
+	// array declaration
+	int arr[5] = {43, 35, 100, 12, 54};
+	
+	//print input elements
+	cout << "Unsorted Array elements" << endl;
+	for(i = 0; i < 5; i++){
+		cout << arr[i] << "\t";
+	}
+	cout << endl;
+	
+	//sorting - ASCENDING ORDER
+	for(i = 0; i < 5; i++)
+	{		
+		for(j = i + 1; j < 5; j++)
+		{
+			if(arr[i] > arr[j])
+			{
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+	
+	//print sorted array elements
+	cout << "Largest element = " << arr[4];
+	return 0;
+	
+}
